@@ -5,10 +5,6 @@
 ```bash
 $ go get -u github.com/gin-gonic/gin
 ```
-- github.com/gorilla/handlers
-```bash
-$ go get github.com/gorilla/handlers
-```
 - GORM:
 ```bash
 $ go get -u gorm.io/gorm
