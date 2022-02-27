@@ -33,4 +33,4 @@ $ go get gorm.io/driver/postgres # postgres driver
 
 ## Day 27/100: Developing a Rest API with GIN
 - return all students from DB
-- new endpoint: SearchStudentByID
+- new endpoints: SearchStudentByID, DeleteStudent, EditStudent, SearchStudentByIRD

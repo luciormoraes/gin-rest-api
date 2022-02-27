@@ -44,3 +44,42 @@ func SearchStudentByID(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, student)
 }
+
+func DeleteStudentByID(c *gin.Context) {
+	var student models.Student
+	id := c.Params.ByName("id")
+	database.DB.Delete(&student, id)
+
+	c.JSON(http.StatusOK, gin.H{
+		"Deleted": "Student has been removed from database",
+	})
+}
+
+func EditStudent(c *gin.Context) {
+	var student models.Student
+	id := c.Params.ByName("id")
+	database.DB.First(&student, id)
+
+	if err := c.ShouldBindJSON(&student); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error()})
+		return
+	}
+
+	database.DB.Model(&student).UpdateColumns(student)
+	c.JSON(http.StatusOK, student)
+}
+
+func SearchStudentByIRD(c *gin.Context) {
+	var student models.Student
+	ird := c.Param("ird")
+	database.DB.Where(&models.Student{IRD: ird}).First(&student)
+
+	if student.ID == 0 {
+		c.JSON(http.StatusNotFound, gin.H{
+			"Not Found": "Couldn't find a student with this IRD",
+		})
+		return
+	}
+	c.JSON(http.StatusOK, student)
+}
