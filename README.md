@@ -30,3 +30,7 @@ $ go get gorm.io/driver/postgres # postgres driver
 - Installing GORM
 - Change controller to create students / new endpoint
 - using autoMigrate from gorm: Struct Student as gorm.Model
+
+## Day 27/100: Developing a Rest API with GIN
+- return all students from DB
+- new endpoint: SearchStudentByID

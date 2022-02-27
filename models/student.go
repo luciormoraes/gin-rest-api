@@ -8,5 +8,3 @@ type Student struct {
 	IRD           string `json:"ird"`
 	DriverLicence string `json:"driverLicence"`
 }
-
-var Students []Student
