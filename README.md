@@ -10,6 +10,10 @@ $ go get -u github.com/gin-gonic/gin
 $ go get -u gorm.io/gorm
 $ go get gorm.io/driver/postgres # postgres driver
 ```
+- Validator: https://pkg.go.dev/gopkg.in/validator.v2
+```bash
+go get gopkg.in/validator.v2
+```
 - Postgres
 - PGAdmin
 - docker
@@ -34,3 +38,6 @@ $ go get gorm.io/driver/postgres # postgres driver
 ## Day 27/100: Developing a Rest API with GIN
 - return all students from DB
 - new endpoints: SearchStudentByID, DeleteStudent, EditStudent, SearchStudentByIRD
+
+## Day 30/100: Developing a Rest API with GIN
+- writing validations: installing Validator.v2
