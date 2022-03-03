@@ -14,6 +14,10 @@ $ go get gorm.io/driver/postgres # postgres driver
 ```bash
 go get gopkg.in/validator.v2
 ```
+- Test: github.com/stretchr/testify
+```bash
+go get github.com/stretchr/testify
+```
 - Postgres
 - PGAdmin
 - docker
@@ -41,3 +45,8 @@ go get gopkg.in/validator.v2
 
 ## Day 30/100: Developing a Rest API with GIN
 - writing validations: installing Validator.v2
+
+## Day 31/100: Developing a Rest API with GIN
+- applying validations model / controller: not null strings, length, just numeric values
+- creating tests: check status code
+- adding testify to assert
