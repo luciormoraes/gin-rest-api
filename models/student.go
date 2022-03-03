@@ -8,8 +8,8 @@ import (
 type Student struct {
 	gorm.Model
 	Name          string `json:"name" validate:"nonzero"`
-	IRD           string `json:"ird" validate:"len=6"`
-	DriverLicence string `json:"driverLicence" validate:"len=7"`
+	IRD           string `json:"ird" validate:"len=6,regexp=^[0-9]*$"`
+	DriverLicence string `json:"driverLicence" validate:"len=7,regexp=^[0-9]*$"`
 }
 
 func ValidateStudent(student *Student) error {
