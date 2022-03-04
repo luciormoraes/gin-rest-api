@@ -18,6 +18,10 @@ go get gopkg.in/validator.v2
 ```bash
 go get github.com/stretchr/testify
 ```
+- To execute just one test
+```bash
+go test -run TEST_name
+```
 - Postgres
 - PGAdmin
 - docker
@@ -49,4 +53,8 @@ go get github.com/stretchr/testify
 ## Day 31/100: Developing a Rest API with GIN
 - applying validations model / controller: not null strings, length, just numeric values
 - creating tests: check status code
-- adding testify to assert
+- adding Testify to assert
+
+## Day 32/100: Developing a Rest API with GIN
+- testing endpoints
+- creating student mock, delete student mock
