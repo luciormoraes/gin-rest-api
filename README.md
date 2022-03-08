@@ -58,3 +58,7 @@ go test -run TEST_name
 ## Day 32/100: Developing a Rest API with GIN
 - testing endpoints
 - creating student mock, delete student mock
+
+## Day 36/100: Developing a Rest API with GIN
+- rendering html pages with gin: index and 404
+- register a path for static files
